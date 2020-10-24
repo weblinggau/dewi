@@ -11,7 +11,38 @@ class Home extends CI_Controller {
 		$this->load->view('template/home_footer.php');
 	}
 
-	public function artikel(){
-		echo "ini page artikel";
+	public function about(){
+		$this->load->view('template/home_head.php');
+		$this->load->view('template/home_menu.php');
+		$this->load->view('about/index');
+		$this->load->view('template/home_footer.php');
+	}
+
+	public function fakultas(){
+		$this->load->view('template/home_head.php');
+		$this->load->view('template/home_menu.php');
+		$this->load->view('fakultas/index');
+		$this->load->view('template/home_footer.php');
+	}
+
+	public function prodi(){
+		$this->load->view('template/home_head.php');
+		$this->load->view('template/home_menu.php');
+		$this->load->view('prodi/index');
+		$this->load->view('template/home_footer.php');
+	}
+
+	public function blog(){
+		$this->load->view('template/home_head.php');
+		$this->load->view('template/home_menu.php');
+		$this->load->view('blog/index');
+		$this->load->view('template/home_footer.php');
+	}
+
+	public function kontak(){
+		$this->load->view('template/home_head.php');
+		$this->load->view('template/home_menu.php');
+		$this->load->view('kontak/index');
+		$this->load->view('template/home_footer.php');
 	}
 }

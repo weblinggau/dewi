@@ -1,22 +1,77 @@
 <body>
-        <div id="layoutDefault">
-            <div id="layoutDefault_content">
-                <main>
-                    <nav class="navbar navbar-marketing navbar-expand-lg bg-white navbar-light">
-                        <div class="container">
-                            <a class="navbar-brand text-dark" href="index.html">Universitas Bina Insan</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav ml-auto mr-lg-5">
-                                    <li class="nav-item"><a class="nav-link" href="<?= base_url(); ?>">Home </a></li>
-                                    <li class="nav-item dropdown dropdown-xl no-caret">
-                                        <a class="nav-link dropdown-toggle" id="navbarDropdownDemos" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us<i class="fas fa-chevron-right dropdown-arrow"></i></a>
+    <!-- ##### Preloader ##### -->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 h-100">
+                        <div class="header-content h-100 d-flex align-items-center justify-content-between">
+                            <div class="academy-logo">
+                                <a href="index.html"><img src="<?= base_url('uis/'); ?>img/core-img/logo1.png"  width="100" height="100">
+                                    <a href="#"></a><h4>University BinaInsan</h4>
+                            </div>
+                            <div class="login-content">
+                                <a href="<?= base_url('auth'); ?>">Register / Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar Area -->
+        <div class="academy-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="academyNav">
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="<?= base_url(); ?>">Home</a></li>
+                                    <li><a href="#">Pages</a>
+                                        <ul class="dropdown">
+                                            <li><a href="<?= base_url('home/fakultas'); ?>">Fakultas</a></li>
+                                            <li><a href="<?= base_url('home/blog'); ?>">Blog</a></li>
+                                            <li><a href="<?= base_url('home/prodi'); ?>">Prodi</a></li>
+                                        </ul>
                                     </li>
-                                    <li class="nav-item dropdown dropdown-lg no-caret">
-                                        <a class="nav-link dropdown-toggle" id="navbarDropdownPages" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Us<i class="fas fa-chevron-right dropdown-arrow"></i></a>
-                                        
-                                    </li>
+                                    <li><a href="<?= base_url('home/about'); ?>">About Us</a></li>
+                                    <li><a href="<?= base_url('home/kontak'); ?>">Contact</a></li>
                                 </ul>
-                                <a class="btn-primary btn rounded-pill px-4 ml-lg-4" href="">Login<i class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+
+                        <!-- Calling Info -->
+                        <div class="calling-info">
+                            <div class="call-center">
+                                <a href="tel:+654563325568889"><i class="icon-telephone-2"></i> <span>(+65) 456 332 5568 889</span></a>
                             </div>
                         </div>
                     </nav>
+                </div>
+            </div>
+        </div>
+    </header>
