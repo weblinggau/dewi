@@ -14,8 +14,8 @@
                     <div class="col-12 h-100">
                         <div class="header-content h-100 d-flex align-items-center justify-content-between">
                             <div class="academy-logo">
-                                <a href="index.html"><img src="<?= base_url('uis/'); ?>img/core-img/logo1.png"  width="100" height="100">
-                                    <a href="#"></a><h4>University BinaInsan</h4>
+                                <a href="<?= base_url(); ?>"><img src="<?= base_url('uis/img/core-img/'); ?><?= $setting->logo; ?>"  width="100" height="100">
+                                    <a href="#"></a><h4><?= $setting->judul; ?></h4>
                             </div>
                             <div class="login-content">
                                 <a href="<?= base_url('auth'); ?>">Register / Login</a>
@@ -52,9 +52,12 @@
                                     <li><a href="<?= base_url(); ?>">Home</a></li>
                                     <li><a href="#">Pages</a>
                                         <ul class="dropdown">
-                                            <li><a href="<?= base_url('home/fakultas'); ?>">Fakultas</a></li>
-                                            <li><a href="<?= base_url('home/blog'); ?>">Blog</a></li>
-                                            <li><a href="<?= base_url('home/prodi'); ?>">Prodi</a></li>
+                                            <?php 
+                                            foreach ($menu as $men) {
+                                             ?>
+                                            <li><a href="<?= base_url().$men->pdm_link; ?>"><?= $men->pm_nama; ?></a></li>
+                                            <?php } ?>
+                                           
                                         </ul>
                                     </li>
                                     <li><a href="<?= base_url('home/about'); ?>">About Us</a></li>
@@ -67,7 +70,7 @@
                         <!-- Calling Info -->
                         <div class="calling-info">
                             <div class="call-center">
-                                <a href="tel:+654563325568889"><i class="icon-telephone-2"></i> <span>(+65) 456 332 5568 889</span></a>
+                                <a href="tel:+<?= $setting->telp; ?>"><i class="icon-telephone-2"></i> <span><?= $setting->telp; ?></span></a>
                             </div>
                         </div>
                     </nav>
