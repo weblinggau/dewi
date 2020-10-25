@@ -196,7 +196,7 @@
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
                             <p><?= substr($art->pa_isi, 0, 100); ?>...</p>
-                            <a href="<?= base_url('artikel/').$art->pa_link; ?>" class="btn academy-btn btn-sm">See More</a>
+                            <a href="<?= base_url('artikel/detail/').$art->pa_link; ?>" class="btn academy-btn btn-sm">See More</a>
                         </div>
                         <div class="popular-course-thumb bg-img" style="background-image: url(<?= base_url('uis/img/bg-img/').$art->pa_file; ?>);"></div>
                     </div>

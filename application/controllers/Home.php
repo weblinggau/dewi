@@ -29,6 +29,7 @@ class Home extends CI_Controller {
 		$data['galeri'] = $this->Userdata->getgaleri()->result();
 		$data['pem'] = $this->Userdata->getpengumuman()->result();
 		$data['artikel'] = $this->Userdata->getartikel()->result();
+		$data['about'] = $this->Userdata->getabout()->row();
 		$this->load->view('template/home_head.php');
 		$this->load->view('template/home_menu.php',$data);
 		$this->load->view('about/index',$data);
@@ -41,6 +42,7 @@ class Home extends CI_Controller {
 		$data['galeri'] = $this->Userdata->getgaleri()->result();
 		$data['pem'] = $this->Userdata->getpengumuman()->result();
 		$data['artikel'] = $this->Userdata->getartikel()->result();
+		$data['fakultas'] = $this->Userdata->getfakultas()->row();
 		$this->load->view('template/home_head.php');
 		$this->load->view('template/home_menu.php',$data);
 		$this->load->view('fakultas/index',$data);
@@ -53,6 +55,7 @@ class Home extends CI_Controller {
 		$data['galeri'] = $this->Userdata->getgaleri()->result();
 		$data['pem'] = $this->Userdata->getpengumuman()->result();
 		$data['artikel'] = $this->Userdata->getartikel()->result();
+		$data['prodi'] = $this->Userdata->getprodi()->row();
 		$this->load->view('template/home_head.php');
 		$this->load->view('template/home_menu.php',$data);
 		$this->load->view('prodi/index',$data);
@@ -64,9 +67,11 @@ class Home extends CI_Controller {
 		$data['setting'] = $this->Userdata->getsetting()->row();
 		$data['galeri'] = $this->Userdata->getgaleri()->result();
 		$data['pem'] = $this->Userdata->getpengumuman()->result();
+		$data['kategori'] = $this->Userdata->getkategori()->result();
+		$data['allartik'] = $this->Userdata->getallartikel()->result();
 		$this->load->view('template/home_head.php');
 		$this->load->view('template/home_menu.php',$data);
-		$this->load->view('blog/index');
+		$this->load->view('blog/index',$data);
 		$this->load->view('template/home_footer.php',$data);
 	}
 

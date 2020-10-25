@@ -18,7 +18,13 @@
                                     <a href="#"></a><h4><?= $setting->judul; ?></h4>
                             </div>
                             <div class="login-content">
+                                <?php 
+                                if ($this->session->userdata('login') != 'zpmlogin') {
+                                 ?>
                                 <a href="<?= base_url('auth'); ?>">Register / Login</a>
+                                <?php }else{ ?>
+                                <a href="<?= base_url('panel'); ?>">Dashboard</a>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>

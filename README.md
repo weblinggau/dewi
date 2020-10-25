@@ -7,6 +7,15 @@ jgn lupa untuk atur dulu di folder ``application/config/config.php`` sesuikan ba
 # database
 file database ada di folder `` database `` jgn lupa untuk setting data base sesui data local server nya di ``application/config/database.php `` sesuikan dengan kebutuhan.
 
+# login panel
+untuk admin <br/>
+usename : admin <br/>
+password : 1234 <br/><br/>
+
+untuk pengelola<br/>
+username : pengelola<br/>
+password : 1234
+
 # Cangelog
 01-10-2020<br/>
 -create github repository<br/><br/>
@@ -20,5 +29,6 @@ file database ada di folder `` database `` jgn lupa untuk setting data base sesu
 25-10-2020<br/>
 -semua page pront end sudah integrasi dengan database dan dinamis<br/>
 -Pembuatan database dasar<br/>
--tinggal dibuatkn backend untuk remote lagi<br/>
+-pembuatan menu backend dan panel cms<br/>
+-semua menu cms sis admin sudah di buat tingga 3 manu utama yaitu `` artikel, slide, galeri, dan user ``<br/>
 

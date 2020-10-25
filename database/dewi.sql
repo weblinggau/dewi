@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 24 Okt 2020 pada 13.52
+-- Waktu pembuatan: 25 Okt 2020 pada 08.36
 -- Versi server: 8.0.18
 -- Versi PHP: 7.3.11
 
@@ -21,6 +21,45 @@ SET time_zone = "+00:00";
 --
 -- Database: `dewi`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `kontak`
+--
+
+CREATE TABLE `kontak` (
+  `id_kontak` int(11) NOT NULL,
+  `nama` text COLLATE utf8mb4_general_ci NOT NULL,
+  `email` text COLLATE utf8mb4_general_ci NOT NULL,
+  `pesan` text COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `kontak`
+--
+
+INSERT INTO `kontak` (`id_kontak`, `nama`, `email`, `pesan`) VALUES
+(3, 'adjie', 'hellowordpart1@gmail.com', 'hallo guys');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `p_about`
+--
+
+CREATE TABLE `p_about` (
+  `id_about` int(11) NOT NULL,
+  `judul` text COLLATE utf8mb4_general_ci NOT NULL,
+  `isi` text COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `p_about`
+--
+
+INSERT INTO `p_about` (`id_about`, `judul`, `isi`) VALUES
+(1, 'Page About Us', '<p style=\"text-align: justify;\">Fakultas Ekonomi dan Bisnis Universitas Bina Insan Lubuklinggau merupakan salah satu Fakultas Universitas Bina Insan yang berada di Kota Lubuklinggau, Provinsi Sumatera Selatan, yang berdiri pada tanggal 6 agustus tahun 1999. Fakultas Universitas Bina Insan sampai sekarang adalah kampus yang telah diakui oleh Masyarakat dan Pemerintah Kota Lubuklinggau dan sekitarnya sebagai salah satu perguruan tinggi swasta di Indonesia, khususnya di L2Dikti II.</p>');
 
 -- --------------------------------------------------------
 
@@ -45,9 +84,9 @@ CREATE TABLE `p_artikel` (
 
 INSERT INTO `p_artikel` (`partikelid`, `pa_judul`, `pa_tgl`, `pa_isi`, `pa_link`, `id_kategori`, `pa_file`, `pa_penulis`) VALUES
 (1, 'berita utama hari ini', '2020-10-24', 'Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.', 'berita-utama-hari-ini', 1, '1.png', 'adjie'),
-(2, 'What is Lorem Ipsum?', '2020-10-24', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'What-is-Lorem-Ipsum?', 1, '2.png', 'admin'),
-(3, 'Where does it come from?', '2020-10-23', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.', 'Where-doe-it-come-rom?', 1, '3.png', 'admin'),
-(4, 'Where can I get some?', '2020-10-24', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.', 'Where-can-I-get-some?', 1, '4.png', 'anonim');
+(2, 'What is Lorem Ipsum?', '2020-10-24', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'What-is-Lorem-Ipsum', 1, '2.png', 'admin'),
+(3, 'Where does it come from?', '2020-10-23', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.', 'Where-doe-it-come-rom', 1, '3.png', 'admin'),
+(4, 'Where can I get some?', '2020-10-24', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.', 'Where-can-I-get-some', 1, '4.png', 'anonim');
 
 -- --------------------------------------------------------
 
@@ -70,6 +109,25 @@ INSERT INTO `p_detail_menu` (`pdetailmenuid`, `pdm_link`) VALUES
 (3, 'home/blog'),
 (4, 'home/prodi'),
 (5, 'home/kontak');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `p_fakultas`
+--
+
+CREATE TABLE `p_fakultas` (
+  `id_fakultas` int(11) NOT NULL,
+  `judul` text COLLATE utf8mb4_general_ci NOT NULL,
+  `isi` text COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `p_fakultas`
+--
+
+INSERT INTO `p_fakultas` (`id_fakultas`, `judul`, `isi`) VALUES
+(1, 'Page Fakultas', '<div data-wow-delay=\"400ms\">\r\n<p style=\"text-align: justify;\">Fakultas Ekonomi dan Bisnis Universitas Bina Insan Lubuklinggau merupakan salah satu Fakultas Universitas Bina Insan yang berada di Kota Lubuklinggau, Provinsi Sumatera Selatan, yang berdiri pada tanggal 6 agustus tahun 1999. Fakultas Universitas Bina Insan sampai sekarang adalah kampus yang telah diakui oleh Masyarakat dan Pemerintah Kota Lubuklinggau dan sekitarnya sebagai salah satu perguruan tinggi swasta di Indonesia, khususnya di L2Dikti II.</p>\r\n</div>\r\n<div data-wow-delay=\"500ms\">\r\n<p style=\"text-align: justify;\">Fakultas Ekonomi dan Bisnis Universitas Bina Insan Lubuklinggau memiliki Dua (II) Program Studi Strata Satu yaitu Program Studi Manajemen dan Program Studi Akuntansi. Untuk Program Studi yang ada di STIE MURA Lubuklinggau statusnya sudah Terakreditasi semua, dengan SK No. ................................ untuk Program Studi Manajemen, SK. No. ................................ untuk Program Studi Akuntansi. Kini Fakultas Ekonomi dan Bisnis UNIV BI Lubuklinggau mengajukan Re-Akreditasi institusi setelah melakukan berbagai evaluasi, perbaikan, dan kemajuan, bukan saja untuk mendapatkan pengakuan dari BAN-PT, namun juga mendapat pengakuan dari sivitas akademika, stakeholder, dan masyarakat di Indonesia..</p>\r\n</div>');
 
 -- --------------------------------------------------------
 
@@ -162,6 +220,25 @@ INSERT INTO `p_pengumuman` (`id_pem`, `tgl`, `judul`, `isi`, `file`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `p_prodi`
+--
+
+CREATE TABLE `p_prodi` (
+  `id_prodi` int(11) NOT NULL,
+  `judul` text COLLATE utf8mb4_general_ci NOT NULL,
+  `isi` text COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `p_prodi`
+--
+
+INSERT INTO `p_prodi` (`id_prodi`, `judul`, `isi`) VALUES
+(1, 'Page Prodi', '<div data-wow-delay=\"400ms\">\r\n<p style=\"text-align: justify;\">Fakultas Ekonomi dan Bisnis Universitas Bina Insan Lubuklinggau merupakan salah satu Fakultas Universitas Bina Insan yang berada di Kota Lubuklinggau, Provinsi Sumatera Selatan, yang berdiri pada tanggal 6 agustus tahun 1999. Fakultas Universitas Bina Insan sampai sekarang adalah kampus yang telah diakui oleh Masyarakat dan Pemerintah Kota Lubuklinggau dan sekitarnya sebagai salah satu perguruan tinggi swasta di Indonesia, khususnya di L2Dikti II.</p>\r\n</div>');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `p_slider`
 --
 
@@ -193,15 +270,17 @@ CREATE TABLE `p_user` (
   `id_user` int(11) NOT NULL,
   `username` varchar(90) COLLATE utf8mb4_general_ci NOT NULL,
   `password` varchar(90) COLLATE utf8mb4_general_ci NOT NULL,
-  `pupegnip` int(20) NOT NULL
+  `pupegnip` int(20) NOT NULL,
+  `role` enum('1','2') COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `p_user`
 --
 
-INSERT INTO `p_user` (`id_user`, `username`, `password`, `pupegnip`) VALUES
-(1, 'admin', '$2y$10$jPoZjCs/do8LFZUGcPQcqeD0vJMZ3TRrB56dTwGtllcgV3lGkQDMa', 32222222);
+INSERT INTO `p_user` (`id_user`, `username`, `password`, `pupegnip`, `role`) VALUES
+(1, 'admin', '$2y$10$jPoZjCs/do8LFZUGcPQcqeD0vJMZ3TRrB56dTwGtllcgV3lGkQDMa', 32222222, '1'),
+(2, 'pengelola', '$2y$10$jPoZjCs/do8LFZUGcPQcqeD0vJMZ3TRrB56dTwGtllcgV3lGkQDMa', 1213, '2');
 
 -- --------------------------------------------------------
 
@@ -223,7 +302,7 @@ CREATE TABLE `setting` (
 --
 
 INSERT INTO `setting` (`id_seting`, `judul`, `telp`, `alamat`, `email`, `logo`) VALUES
-(1, 'Universitas Bina Insan', '6282281022494', '31626 JL. HM Soeharto No.kel, Lubuk Kupang Selatan 1 Kota Lubuk Linggau, Sumatra Selatan', 'mail@mail.com', 'logo1.png');
+(1, 'Universitas BinaInsan', '+6282281022494', '31626 JL. HM Soeharto No.kel, Lubuk Kupang Selatan 1 Kota Lubuk Linggau, Sumatra Selatan', 'mail2@mail.com', '5f95245db7018.png');
 
 -- --------------------------------------------------------
 
@@ -241,6 +320,18 @@ CREATE TABLE `visitor` (
 --
 
 --
+-- Indeks untuk tabel `kontak`
+--
+ALTER TABLE `kontak`
+  ADD PRIMARY KEY (`id_kontak`);
+
+--
+-- Indeks untuk tabel `p_about`
+--
+ALTER TABLE `p_about`
+  ADD PRIMARY KEY (`id_about`);
+
+--
 -- Indeks untuk tabel `p_artikel`
 --
 ALTER TABLE `p_artikel`
@@ -251,6 +342,12 @@ ALTER TABLE `p_artikel`
 --
 ALTER TABLE `p_detail_menu`
   ADD PRIMARY KEY (`pdetailmenuid`);
+
+--
+-- Indeks untuk tabel `p_fakultas`
+--
+ALTER TABLE `p_fakultas`
+  ADD PRIMARY KEY (`id_fakultas`);
 
 --
 -- Indeks untuk tabel `p_galeri`
@@ -275,6 +372,12 @@ ALTER TABLE `p_menu`
 --
 ALTER TABLE `p_pengumuman`
   ADD PRIMARY KEY (`id_pem`);
+
+--
+-- Indeks untuk tabel `p_prodi`
+--
+ALTER TABLE `p_prodi`
+  ADD PRIMARY KEY (`id_prodi`);
 
 --
 -- Indeks untuk tabel `p_slider`
@@ -305,6 +408,18 @@ ALTER TABLE `visitor`
 --
 
 --
+-- AUTO_INCREMENT untuk tabel `kontak`
+--
+ALTER TABLE `kontak`
+  MODIFY `id_kontak` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT untuk tabel `p_about`
+--
+ALTER TABLE `p_about`
+  MODIFY `id_about` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT untuk tabel `p_artikel`
 --
 ALTER TABLE `p_artikel`
@@ -315,6 +430,12 @@ ALTER TABLE `p_artikel`
 --
 ALTER TABLE `p_detail_menu`
   MODIFY `pdetailmenuid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT untuk tabel `p_fakultas`
+--
+ALTER TABLE `p_fakultas`
+  MODIFY `id_fakultas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `p_galeri`
@@ -341,6 +462,12 @@ ALTER TABLE `p_pengumuman`
   MODIFY `id_pem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT untuk tabel `p_prodi`
+--
+ALTER TABLE `p_prodi`
+  MODIFY `id_prodi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT untuk tabel `p_slider`
 --
 ALTER TABLE `p_slider`
@@ -350,7 +477,7 @@ ALTER TABLE `p_slider`
 -- AUTO_INCREMENT untuk tabel `p_user`
 --
 ALTER TABLE `p_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `setting`

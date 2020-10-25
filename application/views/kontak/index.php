@@ -22,9 +22,7 @@
                             <div class="col-12 col-lg-5">
                                 <div class="contact-information wow fadeInUp" data-wow-delay="400ms">
                                     <div class="section-heading text-left">
-                                        <span>The Best</span>
-                                        <h3>Contact Us</h3>
-                                        <p class="mt-30">Lacinia, lacinia la cus non, fermen tum nisi. Donec et sollicitudin. Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed faucibus mauris vitae urna consectetur, sit amet maximus nisl sagittis. Ut in iaculis enim, et pulvinar mauris.</p>
+                                        <h3><?= $setting->judul; ?></h3>
                                     </div>
 
                                     <!-- Contact Social Info -->
@@ -42,7 +40,7 @@
                                         <div class="contact-icon mr-15">
                                             <i class="icon-placeholder"></i>
                                         </div>
-                                        <p>4127/ 5B-C Mislane Road,<br> Gibraltar, UK</p>
+                                        <p><?= $setting->alamat; ?></p>
                                     </div>
 
                                     <!-- Single Contact Info -->
@@ -50,7 +48,7 @@
                                         <div class="contact-icon mr-15">
                                             <i class="icon-telephone-1"></i>
                                         </div>
-                                        <p>Main: 203-808-8613 <br> Office: 203-808-8648</p>
+                                        <p><?= $setting->telp; ?></p>
                                     </div>
 
                                     <!-- Single Contact Info -->
@@ -58,17 +56,22 @@
                                         <div class="contact-icon mr-15">
                                             <i class="icon-contract"></i>
                                         </div>
-                                        <p>office@yourbusiness.com</p>
+                                        <p><?= $setting->email; ?></p>
                                     </div>
                                 </div>
                             </div>
                             <!-- Contact Form Area -->
                             <div class="col-12 col-lg-7">
                                 <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
-                                    <form action="#" method="post">
-                                        <input type="text" class="form-control" id="name" placeholder="Name">
-                                        <input type="email" class="form-control" id="email" placeholder="E-mail">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                    <?php 
+                                        $data['pre'] = date('Ymd');
+                                        $this->session->set_userdata($data);
+                                    ?>
+                                    <?= $this->session->flashdata('message'); ?>
+                                    <form action="<?= base_url("kontak/add");?>" method="post" >
+                                        <input type="text" class="form-control" id="name" placeholder="Name" name="nama" required>
+                                        <input type="email" class="form-control" id="email" placeholder="E-mail" name="email" required>
+                                        <textarea class="form-control" id="message" cols="30" rows="10" placeholder="Message" name="pesan"></textarea>
                                         <button class="btn academy-btn mt-30" type="submit">Contact Us</button>
                                     </form>
                                 </div>

@@ -14,76 +14,31 @@
                         <div class="row">
 
                             <!-- Single Blog Start -->
+                            <?php 
+
+                            foreach ($allartik as $bl) {
+                             ?>
                             <div class="col-12">
                                 <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
                                     <!-- Post Thumb -->
                                     <div class="blog-post-thumb mb-50">
-                                        <img src="<?= base_url('uis/'); ?>img/blog-img/1.jpg" alt="">
+                                        <img src="<?= base_url('uis/img/bg-img/').$bl->pa_file; ?>" alt="">
                                     </div>
                                     <!-- Post Title -->
-                                    <a href="#" class="post-title">Top ten courses we love for you to try</a>
+                                    <a href="#" class="post-title"><?= $bl->pa_judul; ?></a>
                                     <!-- Post Meta -->
                                     <div class="post-meta">
-                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> | <a href="#">3 comments</a></p>
+                                        <p>By <a href="#"><?= $bl->pa_penulis ?></a> | <a href="#"><?= $bl->pa_tgl; ?></a></p>
                                     </div>
                                     <!-- Post Excerpt -->
-                                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est.</p>
+                                    <p><?= substr($bl->pa_isi, 0, 100); ?>...</p>
                                     <!-- Read More btn -->
-                                    <a href="#" class="btn academy-btn btn-sm mt-15">Read More</a>
+                                    <a href="<?= base_url('artikel/detail/').$bl->pa_link; ?>" class="btn academy-btn btn-sm mt-15">Read More</a>
                                 </div>
                             </div>
-
-                            <!-- Single Blog Start -->
-                            <div class="col-12">
-                                <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="400ms">
-                                    <!-- Post Thumb -->
-                                    <div class="blog-post-thumb mb-50">
-                                        <img src="<?= base_url('uis/'); ?>img/blog-img/2.jpg" alt="">
-                                    </div>
-                                    <!-- Post Title -->
-                                    <a href="#" class="post-title">Top ten courses we love for you to try</a>
-                                    <!-- Post Meta -->
-                                    <div class="post-meta">
-                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> | <a href="#">3 comments</a></p>
-                                    </div>
-                                    <!-- Post Excerpt -->
-                                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est.</p>
-                                    <!-- Read More btn -->
-                                    <a href="#" class="btn academy-btn btn-sm mt-15">Read More</a>
-                                </div>
-                            </div>
-
-                            <!-- Single Blog Start -->
-                            <div class="col-12">
-                                <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="500ms">
-                                    <!-- Post Thumb -->
-                                    <div class="blog-post-thumb mb-50">
-                                        <img src="<?= base_url('uis/'); ?>img/blog-img/3.jpg" alt="">
-                                    </div>
-                                    <!-- Post Title -->
-                                    <a href="#" class="post-title">Top ten courses we love for you to try</a>
-                                    <!-- Post Meta -->
-                                    <div class="post-meta">
-                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> | <a href="#">3 comments</a></p>
-                                    </div>
-                                    <!-- Post Excerpt -->
-                                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est.</p>
-                                    <!-- Read More btn -->
-                                    <a href="#" class="btn academy-btn btn-sm mt-15">Read More</a>
-                                </div>
-                            </div>
+                            <?php } ?>
 
                         </div>
-                    </div>
-                    <!-- Pagination Area Start -->
-                    <div class="academy-pagination-area wow fadeInUp" data-wow-delay="400ms">
-                        <nav>
-                            <ul class="pagination">
-                                <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                                <li class="page-item"><a class="page-link" href="#">02</a></li>
-                                <li class="page-item"><a class="page-link" href="#">03</a></li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
 
@@ -101,10 +56,11 @@
                         <div class="blog-post-categories mb-30">
                             <h5>Categories</h5>
                             <ul>
-                                <li><a href="#">Courses</a></li>
-                                <li><a href="#">Education</a></li>
-                                <li><a href="#">Teachers</a></li>
-                                <li><a href="#">Uncategorized</a></li>
+                                <?php 
+                                foreach ($kategori as $kat) {
+                                 ?>
+                                <li><a href="#"><?= $kat->kategori; ?></a></li>
+                            <?php } ?>
                             </ul>
                         </div>
 
