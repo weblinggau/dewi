@@ -38,7 +38,8 @@ private function _login()
                 $data=[
                     'username'=>$user['username'],
                     'role'=>$user['role'],
-                    'login' => 'zpmlogin'
+                    'login' => 'zpmlogin',
+                    'id_user' => $user['id_user']
                 ];
                 $this->session->set_userdata($data);
                 redirect('Panel');
@@ -56,6 +57,7 @@ public function logout()
     $this->session->unset_userdata('username');
     $this->session->unset_userdata('role');
     $this->session->unset_userdata('login');
+    $this->session->unset_userdata('id_user');
 
     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">You have been Logged out! </div>');
    redirect('auth');

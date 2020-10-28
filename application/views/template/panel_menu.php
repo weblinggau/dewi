@@ -92,6 +92,12 @@
           <span>Galeri</span>
         </a>
       </li>
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="<?= base_url('panel/menu'); ?>" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-user-clock"></i>
+          <span>Menu</span>
+        </a>
+      </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="<?= base_url('panel/user'); ?>" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-user-clock"></i>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 25 Okt 2020 pada 08.36
+-- Waktu pembuatan: 28 Okt 2020 pada 11.00
 -- Versi server: 8.0.18
 -- Versi PHP: 7.3.11
 
@@ -86,7 +86,7 @@ INSERT INTO `p_artikel` (`partikelid`, `pa_judul`, `pa_tgl`, `pa_isi`, `pa_link`
 (1, 'berita utama hari ini', '2020-10-24', 'Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.', 'berita-utama-hari-ini', 1, '1.png', 'adjie'),
 (2, 'What is Lorem Ipsum?', '2020-10-24', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'What-is-Lorem-Ipsum', 1, '2.png', 'admin'),
 (3, 'Where does it come from?', '2020-10-23', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.', 'Where-doe-it-come-rom', 1, '3.png', 'admin'),
-(4, 'Where can I get some?', '2020-10-24', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.', 'Where-can-I-get-some', 1, '4.png', 'anonim');
+(4, 'Where can I get some', '2020-10-24', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.', 'Where-can-I-get-some', 1, '4.png', 'anonim');
 
 -- --------------------------------------------------------
 
@@ -151,7 +151,8 @@ CREATE TABLE `p_galeri` (
 INSERT INTO `p_galeri` (`pfotoid`, `pf_judul`, `pf_tanggal`, `pf_ket`, `pfuserid`, `pf_file`) VALUES
 (1, 'photo bersama', '2020-10-24', 'bagus', '1', 'img/bg-img/1.png'),
 (2, 'test 1', '2020-10-24', 'test 1', '1', 'img/bg-img/2.png'),
-(3, 'test 2', '2020-10-24', 'test', '1', 'img/bg-img/3.png');
+(3, 'test 2', '2020-10-24', 'test', '1', 'img/bg-img/3.png'),
+(6, 'photo ad', '2020-10-28', 'ada', '1', 'img/bg-img/5f993f0ac8e83.jpeg');
 
 -- --------------------------------------------------------
 
@@ -169,7 +170,8 @@ CREATE TABLE `p_ketegori` (
 --
 
 INSERT INTO `p_ketegori` (`id_kategori`, `kategori`) VALUES
-(1, 'news');
+(1, 'news'),
+(2, 'artikel');
 
 -- --------------------------------------------------------
 
@@ -257,8 +259,9 @@ CREATE TABLE `p_slider` (
 --
 
 INSERT INTO `p_slider` (`psliderid`, `ps_file`, `ps_tanggal`, `ps_title`, `ps_status`, `ps_userid`, `ps_link`) VALUES
-(1, 'bimtek.jpg', '2020-10-24', 'Bimtek', '1', '1', 'home'),
-(2, 'kuliah-di-luar-kampus.jpg', '2020-10-24', 'Kuliah Keluar Kampus', '1', '1', 'home');
+(1, 'bimtek.jpg', '2020-10-28', 'Bimtek Univbi', '1', '1', 'home'),
+(2, 'kuliah-di-luar-kampus.jpg', '2020-10-24', 'Kuliah Keluar Kampus', '1', '1', 'home'),
+(4, '5f9918dcb2485.jpg', '2020-10-28', 'Talk show Papeja', '1', '1', 'http://univbinainsan.ac.id');
 
 -- --------------------------------------------------------
 
@@ -280,7 +283,8 @@ CREATE TABLE `p_user` (
 
 INSERT INTO `p_user` (`id_user`, `username`, `password`, `pupegnip`, `role`) VALUES
 (1, 'admin', '$2y$10$jPoZjCs/do8LFZUGcPQcqeD0vJMZ3TRrB56dTwGtllcgV3lGkQDMa', 32222222, '1'),
-(2, 'pengelola', '$2y$10$jPoZjCs/do8LFZUGcPQcqeD0vJMZ3TRrB56dTwGtllcgV3lGkQDMa', 1213, '2');
+(2, 'pengelola', '$2y$10$jPoZjCs/do8LFZUGcPQcqeD0vJMZ3TRrB56dTwGtllcgV3lGkQDMa', 1213, '2'),
+(4, 'super', '$2y$10$FE8p7Kdkt2qv/V1saOkZzOv4D7BiEOhztobLxv8W6bVylpWhaq2ji', 1213, '2');
 
 -- --------------------------------------------------------
 
@@ -423,13 +427,13 @@ ALTER TABLE `p_about`
 -- AUTO_INCREMENT untuk tabel `p_artikel`
 --
 ALTER TABLE `p_artikel`
-  MODIFY `partikelid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `partikelid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `p_detail_menu`
 --
 ALTER TABLE `p_detail_menu`
-  MODIFY `pdetailmenuid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `pdetailmenuid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `p_fakultas`
@@ -441,19 +445,19 @@ ALTER TABLE `p_fakultas`
 -- AUTO_INCREMENT untuk tabel `p_galeri`
 --
 ALTER TABLE `p_galeri`
-  MODIFY `pfotoid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `pfotoid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `p_ketegori`
 --
 ALTER TABLE `p_ketegori`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `p_menu`
 --
 ALTER TABLE `p_menu`
-  MODIFY `pmenuid` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `pmenuid` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `p_pengumuman`
@@ -471,13 +475,13 @@ ALTER TABLE `p_prodi`
 -- AUTO_INCREMENT untuk tabel `p_slider`
 --
 ALTER TABLE `p_slider`
-  MODIFY `psliderid` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `psliderid` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `p_user`
 --
 ALTER TABLE `p_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `setting`

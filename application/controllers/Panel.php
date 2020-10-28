@@ -73,7 +73,7 @@ class Panel extends CI_Controller {
     }
 
     public function kontak(){
-        if ($this->session->userdata('login') != 'zpmlogin' && $this->session->userdata('role') != 1) {
+        if ($this->session->userdata('login') != 'zpmlogin' || $this->session->userdata('role') != 1) {
             redirect('panel') ;
         }else{
             $data['kontak'] = $this->Userdata->getkontak()->result();
@@ -89,49 +89,50 @@ class Panel extends CI_Controller {
         if ($this->session->userdata('login') != 'zpmlogin' && $this->session->userdata('role') != 1) {
             redirect('panel') ;
         }else{
-            // $data['kontak'] = $this->Userdata->getkontak()->result();
+            $data['kategori'] = $this->Userdata->getkategori()->result();
             $this->load->view('template/panel_header');
             $this->load->view('template/panel_menu');
-            // $this->load->view('kontak/panel',$data);
+            $this->load->view('kategori/index',$data);
             $this->load->view('template/panel_footer');
         }
         
     }
 
     public function artikel(){
-        if ($this->session->userdata('login') != 'zpmlogin' && $this->session->userdata('role') != 1 && $this->session->userdata('role') != 2) {
+        if ($this->session->userdata('login') != 'zpmlogin') {
             redirect('panel') ;
         }else{
-            // $data['kontak'] = $this->Userdata->getkontak()->result();
+            $data['artikel'] = $this->Userdata->getart()->result();
+            $data['kategori'] = $this->Userdata->getkategori()->result();
             $this->load->view('template/panel_header');
             $this->load->view('template/panel_menu');
-            // $this->load->view('kontak/panel',$data);
+            $this->load->view('artikel/panel',$data);
             $this->load->view('template/panel_footer');
         }
         
     }
 
     public function slide(){
-        if ($this->session->userdata('login') != 'zpmlogin' && $this->session->userdata('role') != 1 && $this->session->userdata('role') != 2) {
+        if ($this->session->userdata('login') != 'zpmlogin') {
             redirect('panel') ;
         }else{
-            // $data['kontak'] = $this->Userdata->getkontak()->result();
+            $data['slide'] = $this->Userdata->getslide()->result();
             $this->load->view('template/panel_header');
             $this->load->view('template/panel_menu');
-            // $this->load->view('kontak/panel',$data);
+            $this->load->view('slide/panel',$data);
             $this->load->view('template/panel_footer');
         }
         
     }
 
     public function galeri(){
-        if ($this->session->userdata('login') != 'zpmlogin' && $this->session->userdata('role') != 1 && $this->session->userdata('role') != 2) {
+        if ($this->session->userdata('login') != 'zpmlogin') {
             redirect('panel') ;
         }else{
-            // $data['kontak'] = $this->Userdata->getkontak()->result();
+            $data['galeri'] = $this->Userdata->getgaleri()->result();
             $this->load->view('template/panel_header');
             $this->load->view('template/panel_menu');
-            // $this->load->view('kontak/panel',$data);
+            $this->load->view('galeri/panel',$data);
             $this->load->view('template/panel_footer');
         }
         
@@ -141,10 +142,23 @@ class Panel extends CI_Controller {
         if ($this->session->userdata('login') != 'zpmlogin' && $this->session->userdata('role') != 1) {
             redirect('panel') ;
         }else{
-            // $data['kontak'] = $this->Userdata->getkontak()->result();
+            $data['user'] = $this->Userdata->getuserall()->result();
             $this->load->view('template/panel_header');
             $this->load->view('template/panel_menu');
-            // $this->load->view('kontak/panel',$data);
+            $this->load->view('user/panel',$data);
+            $this->load->view('template/panel_footer');
+        }
+        
+    }
+
+    public function menu(){
+        if ($this->session->userdata('login') != 'zpmlogin' && $this->session->userdata('role') != 1) {
+            redirect('panel') ;
+        }else{
+            $data['menu'] = $this->Userdata->getmenu()->result();
+            $this->load->view('template/panel_header');
+            $this->load->view('template/panel_menu');
+            $this->load->view('menu/panel',$data);
             $this->load->view('template/panel_footer');
         }
         

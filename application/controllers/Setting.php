@@ -12,7 +12,7 @@ class Setting extends CI_Controller
   private function uploadFile(){
 
       $config['upload_path']          = './uis/img/core-img/';
-      $config['allowed_types']        = 'gif|jpg|png';
+      $config['allowed_types']        = 'gif|jpg|png|jpeg';
       $config['file_name']            = uniqid();
       $config['overwrite']      = true;
       $config['max_size']             = 2024; // 1MB
