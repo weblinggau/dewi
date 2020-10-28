@@ -66,57 +66,22 @@
 
                         <!-- Latest Blog Posts Area -->
                         <div class="latest-blog-posts mb-30">
-                            <h5>Latest Posts</h5>
+                            <h5>Pengumuman</h5>
                             <!-- Single Latest Blog Post -->
+                            <?php foreach ($pem as $p) {?>
                             <div class="single-latest-blog-post d-flex mb-30">
                                 <div class="latest-blog-post-thumb">
-                                    <img src="<?= base_url('uis/'); ?>img/blog-img/lb-1.jpg" alt="">
+                                    <img src="<?= base_url('uis/img/blog-img/').$p->file; ?>" alt="">
                                 </div>
                                 <div class="latest-blog-post-content">
                                     <a href="#" class="post-title">
-                                        <h6>New Courses for you</h6>
+                                        <h6><?= $p->judul; ?></h6>
                                     </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
+                                    <a href="#" class="post-date"><?= $p->tgl; ?></a>
                                 </div>
                             </div>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex mb-30">
-                                <div class="latest-blog-post-thumb">
-                                    <img src="<?= base_url('uis/'); ?>img/blog-img/lb-2.jpg" alt="">
-                                </div>
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>A great way to start</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex mb-30">
-                                <div class="latest-blog-post-thumb">
-                                    <img src="<?= base_url('uis/'); ?>img/blog-img/lb-3.jpg" alt="">
-                                </div>
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>New Courses for you</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex">
-                                <div class="latest-blog-post-thumb">
-                                    <img src="<?= base_url('uis/'); ?>img/blog-img/lb-4.jpg" alt="">
-                                </div>
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>Start your training</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
+                            <?php } ?>
                         </div>
-
                         <!-- Add Widget -->
                         <div class="add-widget">
                             <a href="#"><img src="<?= base_url('uis/'); ?>img/blog-img/add.png" alt=""></a>

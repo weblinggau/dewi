@@ -31,5 +31,5 @@ password : 1234
 -Pembuatan database dasar<br/>
 -pembuatan menu backend dan panel cms<br/>
 -semua menu cms sis admin sudah di buat tingga 3 manu utama yaitu `` artikel, slide, galeri, dan user ``<br/><br/>
-28-10-2020<br/>
--semua menu sudah selesai di buat tinggal 1 menu tambhan yaitu menu pengumuman<br/>
+28-10-2020 (projek selesai)<br/>
+-semua menu sudah selesai<br/>

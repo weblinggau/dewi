@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 28 Okt 2020 pada 11.00
+-- Waktu pembuatan: 28 Okt 2020 pada 15.02
 -- Versi server: 8.0.18
 -- Versi PHP: 7.3.11
 
@@ -217,7 +217,8 @@ INSERT INTO `p_pengumuman` (`id_pem`, `tgl`, `judul`, `isi`, `file`) VALUES
 (1, '2020-10-24', 'Pengumuman 1', 't is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters', 'lb-1.jpg'),
 (2, '2020-10-24', 'penguman 2', 't is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters', 'lb-2.jpg'),
 (3, '2020-10-24', 'pengumuman 3', 't is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters', 'lb-3.jpg'),
-(4, '2020-10-24', 'Pengumuman 4', 'as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text', 'lb-4.jpg');
+(4, '2020-10-24', 'Pengumuman 4', 'as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text', 'lb-4.jpg'),
+(5, '2020-10-28', 'Pengumuman 5', 'Berhasil edit pengumuman', '5f9984ea6ea8c.png');
 
 -- --------------------------------------------------------
 
@@ -463,7 +464,7 @@ ALTER TABLE `p_menu`
 -- AUTO_INCREMENT untuk tabel `p_pengumuman`
 --
 ALTER TABLE `p_pengumuman`
-  MODIFY `id_pem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_pem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `p_prodi`

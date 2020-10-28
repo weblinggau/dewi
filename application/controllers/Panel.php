@@ -129,7 +129,7 @@ class Panel extends CI_Controller {
         if ($this->session->userdata('login') != 'zpmlogin') {
             redirect('panel') ;
         }else{
-            $data['galeri'] = $this->Userdata->getgaleri()->result();
+            $data['galeri'] = $this->Userdata->getgal()->result();
             $this->load->view('template/panel_header');
             $this->load->view('template/panel_menu');
             $this->load->view('galeri/panel',$data);
@@ -159,6 +159,19 @@ class Panel extends CI_Controller {
             $this->load->view('template/panel_header');
             $this->load->view('template/panel_menu');
             $this->load->view('menu/panel',$data);
+            $this->load->view('template/panel_footer');
+        }
+        
+    }
+
+    public function pengumuman(){
+        if ($this->session->userdata('login') != 'zpmlogin' && $this->session->userdata('role') != 1) {
+            redirect('panel') ;
+        }else{
+            $data['pem'] = $this->Userdata->getpem()->result();
+            $this->load->view('template/panel_header');
+            $this->load->view('template/panel_menu');
+            $this->load->view('pem/panel',$data);
             $this->load->view('template/panel_footer');
         }
         

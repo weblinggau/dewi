@@ -229,6 +229,10 @@ class UserData extends CI_Model {
     // batas akhir module slide
 
     // module galeri
+    public function getgal(){
+        $data = $this->db->get('p_galeri');
+        return $data;
+    }
     public function addgaleri($data){
     	$this->pf_judul = $data['pf_judul'];
 		$this->pf_ket = $data['pf_ket'];
@@ -355,4 +359,37 @@ class UserData extends CI_Model {
 	    $this->db->trans_complete();
     }
     // batas akhir module menu
+
+    // module menu pengumuman
+    public function getpem(){
+        $data = $this->db->get('p_pengumuman');
+        return $data;
+    }
+    public function addpem($data){
+        $this->judul = $data['judul'];
+        $this->isi = $data['isi'];
+        $this->tgl = $data['tgl'];
+        $this->file = $data['file'];
+        $this->db->insert('p_pengumuman', $this);
+        return;
+    }
+
+    public function hapuspem($id){
+        $this->db->where('id_pem',$id);
+        $this->db->delete('p_pengumuman');
+       return;
+    }
+
+    public function pemedit($id){
+        $this->db->where('id_pem', $id); 
+        $result = $this->db->get('p_pengumuman')->row(); 
+        return $result;
+    }
+
+    public function pemupdate($where,$data){
+        $this->db->where($where);
+        $this->db->update('p_pengumuman',$data);
+        return;
+    }
+    // batas akhir menu pengumuman
 }
